@@ -22,21 +22,22 @@ class LabelsController < ApplicationController
 		parcel = EasyPost::Parcel.create(parcel_params
 		)
 
-		shipment = EasyPost::Shipment.create(
+		@shipment = EasyPost::Shipment.create(
 		  :to_address => to_address,
 		  :from_address => from_address,
 		  :parcel => parcel,
 		)
 
-		if shipment.save
-			redirect_to label_path()
+		if @shipment.save
+			redirect_to labels_path
 			flash[:notice] = "Label created"
-			shipment.get_rates
 		else 
 			redirect_to :back
 			flash[:error] = "Sorry something went wrong!"
 		end
 		
+
+
 		# shipment.buy(:rate => {:id => '{RATE_ID}'})
 
 		# puts shipment.postage_label.label_url
