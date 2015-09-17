@@ -1,0 +1,38 @@
+<div class="row" id="forms">
+	<div class="col-sm-4 well">
+		<h3 align="center">Sending to:</h3>
+		<%= form_for @label do |f|%>
+			<%= f.text_field :name, placeholder: "First and Last Name", autofocus: true, class:"form-control", required: true %>
+			<%= f.text_field :street1, placeholder: "Street Address", class:"form-control", required: true %>
+			<%= f.text_field :street2, placeholder: "Apt, unit, etc.", class:"form-control" %>
+			<%= f.text_field :city, placeholder: "City", class:"form-control", required: true %>
+			<%= f.text_field :state, placeholder: "State", class:"form-control", required: true %>
+			<%= f.text_field :zip, placeholder: "Zip Code", class:"form-control", required: true %>
+			<%= f.text_field :country, placeholder: "Country", class:"form-control", required: true %>
+			<%= f.text_field :phone, placeholder: "Phone Number", class:"form-control", required: true %>
+	</div>
+	<div class="col-sm-4 well">
+		<h3 align="center">From:</h3>
+
+			<%= f.text_field :from_company, placeholder: "First and Last Name or Company", class:"form-control", required: true %>
+			<%= f.text_field :from_street1, placeholder: "Street Address", class:"form-control", required: true %>
+			<%= f.text_field :from_street2, placeholder: "Apt, unit, etc.", class:"form-control" %>
+			<%= f.text_field :from_city, placeholder: "City", class:"form-control", required: true %>
+			<%= f.text_field :from_state, placeholder: "State", class:"form-control", required: true %>
+			<%= f.text_field :from_zip, placeholder: "Zip Code", class:"form-control", required: true %>
+			<%= f.text_field :from_phone, placeholder: "Phone Number", class:"form-control", required: true %>
+	</div>
+	<div class="col-sm-4 well">
+			<h3 align="center">Package details:</h3>
+
+			<%= f.text_field :width, placeholder: "Width (in)", class:"form-control", required: true%>
+			<%= f.text_field :length, placeholder: "Length (in)", class:"form-control", required: true%>
+			<%= f.text_field :height, placeholder: "Height (in)", class:"form-control", required: true%>
+			<%= f.text_field :weight, placeholder: "Weight (oz)", class:"form-control", required: true%>
+	</div>
+</div>
+
+<div class="row" align="center">
+		<%= f.submit "submit", class: "btn btn-info btn-large" %>
+	<% end %>
+</div> <!--button -->

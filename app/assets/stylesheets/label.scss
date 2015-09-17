@@ -1,0 +1,24 @@
+// Place all the styles related to the Label controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body { 
+	background-image: url(image_path('mailbox.jpg'));
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+ }
+
+#forms{
+	margin-bottom: 40px;
+}
+
+.well{
+	height: 60vh;
+	background: white;
+	opacity: .5;
+	&:hover, &:focus{
+		opacity: 1
+	}
+}
